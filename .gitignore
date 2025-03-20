@@ -6,6 +6,7 @@ __pycache__/
 *.ods
 *.zip
 *.npy
+*.exe
 
 # Folder
 /Images

@@ -1,3 +1,7 @@
+# ---------------------------------
+# API for exercise 2
+#
+
 from flask import Flask
 import redis
 import os

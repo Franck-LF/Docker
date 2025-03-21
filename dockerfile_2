@@ -1,0 +1,22 @@
+
+FROM python:3.12
+WORKDIR /test_docker/api2
+
+COPY requirements2.txt /test_docker/api2
+COPY api2.py /test_docker/api2
+
+RUN echo 'Hello' && ls -al
+
+RUN apt-get -y update
+RUN apt install -y redis
+RUN service redis-server start
+RUN pip install --no-cache-dir -r requirements2.txt
+
+EXPOSE 5000
+
+#RUN curl -sS http://0.0.0.0:5000/hello
+#CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000"]
+
+#RUN python api1.py
+#CMD python api1.py
+CMD ["python", "api2.py"]

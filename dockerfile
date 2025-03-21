@@ -1,5 +1,5 @@
 
-FROM python:3.12
+FROM mysql:latest
 WORKDIR /api3
 
 COPY requirements3.txt /api3

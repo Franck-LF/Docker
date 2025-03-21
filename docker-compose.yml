@@ -1,14 +1,14 @@
 version: "2"
 services:
   app:
-    build: ./app
+    build: ./api3
     links:
       - db
     ports:
       - "5000:5000"
 
   db:
-    image: mysql:5.7
+    image: mysql:latest
     ports:
       - "32000:3306"
     environment:

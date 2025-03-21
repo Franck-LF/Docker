@@ -35,6 +35,8 @@ def persons() -> List[Dict]:
 
 @app.route('/', methods=['GET'])
 def index() -> str:
+    print('***** Index route *****')
+    # return {'Hello' : 'api3'}
     return json.dumps({'persons': persons()})
 
 

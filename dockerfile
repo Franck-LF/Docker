@@ -1,10 +1,10 @@
 
 FROM python:3.12
-WORKDIR /app
+WORKDIR /test_docker/app
 
 #COPY C:\\Users\\Utilisateur\\Documents\\Docker\\requirements.txt ./
-COPY requirements.txt /app
-COPY api1.py /app
+COPY requirements.txt /test_docker/app
+COPY api1.py /test_docker/app
 
 RUN echo 'Hello' && ls -al
 

@@ -1,3 +1,7 @@
+# ---------------------------------
+# API for exercise 1
+#
+#
 
 import flask
 from flask import request, jsonify, render_template
@@ -7,7 +11,7 @@ app.config["DEBUG"] = True
 
 @app.route('/hello', methods=['GET'])
 def test():
-    return {'status' : 'OK'}
+    return {'status' : 'Hello, Docker!'}
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
